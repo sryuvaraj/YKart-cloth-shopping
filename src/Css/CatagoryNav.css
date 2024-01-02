@@ -1,0 +1,44 @@
+
+#topNav{
+    color:#115E88 
+}
+
+#topNavList{
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+}
+#cartList{
+    display:flex ;
+    justify-content: space-evenly;
+    align-items: center;
+}
+li{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    align-items: center;
+    font-weight: 700;
+}
+
+.topNavItems{
+    text-decoration: none;
+    color: #115E88 
+}
+.topNavItems:hover{
+    border-bottom: 3px solid #115E88 ;
+}
+
+#logo:hover {
+    border-bottom: 0px solid #115E88 !important;
+}
+
+#logo{
+    display: flex;
+    justify-content: end;
+}
+
+
+.filtItem{
+    font-weight: 600;
+}

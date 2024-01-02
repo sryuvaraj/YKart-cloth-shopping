@@ -1,0 +1,16 @@
+
+.homeProd img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(234, 172, 57);
+}
+
+.fourBenifit{
+    color:rgb(55, 30, 79);
+}
