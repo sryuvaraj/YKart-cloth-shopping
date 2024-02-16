@@ -4,6 +4,20 @@ import {BrowserRouter} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
+import {createStore} from 'redux'
+
+
+//STORE --> globalaized state
+
+
+//ACTION --> what you want to do
+
+
+//Reducer --> it's basically describes how your action trasformed the action to nex state
+
+
+//Dispatch --> This is where we  actually execute action
+
 
 
 

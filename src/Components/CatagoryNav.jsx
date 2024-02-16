@@ -7,6 +7,18 @@ const CatagoryNav = ({ products, displayProducts, setDisplayProducts }) => {
 
   const handleCategory = (e) => {
     const category = e.target.textContent.toLowerCase();
+    // if(["all","tv","ac", "fridge", "washing-machine"].includes(category)){
+    //   setDisplayProducts(category === "all" ? product : product.filter((item) => item.cloth === category))
+    // }
+    // else if (["below 500 /-", "below 800 /-", "below 1000 /-", "above 1000 /-"].includes(category)) {
+    //   let maxPrice;
+    //   if (category === "below 500 /-") maxPrice = 500;
+    //   else if (category === "below 800 /-") maxPrice = 800;
+    //   else if (category === "below 1000 /-") maxPrice = 1000;
+    //   else maxPrice = Infinity;
+
+    //   setDisplayProducts(product.filter((item) => item.price <= maxPrice));
+    // }
 
     if (["all", "men", "women", "kids"].includes(category)) {
       setDisplayProducts(category === "all" ? product : product.filter((item) => item.gender === category));
@@ -38,6 +50,16 @@ const CatagoryNav = ({ products, displayProducts, setDisplayProducts }) => {
           <li className="filtItem" onClick={handleCategory}>Kids</li>
         </ul>
         <hr />
+        {/* <ul className="">
+          <li className="py-2">By Items</li>
+          <li className="filtItem" onClick={handleCategory}>All</li>
+          <li className="filtItem" onClick={handleCategory}>TV</li>
+          <li className="filtItem" onClick={handleCategory}>AC</li>
+          <li className="filtItem" onClick={handleCategory}>Fridge</li>
+          <li className="filtItem" onClick={handleCategory}>Washing-Machine</li>
+          <li className="filtItem" onClick={handleCategory}></li>
+        </ul> */}
+
         <ul className="">
           <li className="py-2">By Clothes</li>
           <li className="filtItem" onClick={handleCategory}>All</li>

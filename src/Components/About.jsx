@@ -1,6 +1,7 @@
 import React from "react";
+import Nav from "./Nav";
 
-const AboutPage = () => {
+const AboutPage = ({cartCount, setCartCount}) => {
   const paragraphStyle = {
     textAlign: "justify",
     textIndent: "20px",
@@ -15,6 +16,9 @@ const AboutPage = () => {
   return (
     <>
       <div>
+      <div className="pt-3 bg-light">
+        <Nav cartCount={cartCount} setCartCount={setCartCount} />
+      </div>
         <div className="row"><h1 style={headerStyle}>About Us</h1>
           <div className="col-md-2"></div>
           <div className="col-md-8">

@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 
-const DisplayProducts = ({ products, dispalyProducts, displayCartProducts,setDisplayCartProducts,setCartCount,cartCount }) => {
+const DisplayProducts = ({ products, dispalyProducts, displayCartProducts,setDisplayCartProducts,setCartCount,cartCount, cartTotal,setcartTotal, buyItems,setBuyItems }) => {
  
+  const addForBuy = (i) =>{
+
+  }
+
+
   const handleAddCar = (item) => {
     setDisplayCartProducts([...displayCartProducts, item])
     setCartCount(cartCount+1)
+    setBuyItems([...buyItems,item])
+    setcartTotal(cartTotal+item.price)
+    alert("Item added to the cart")
   }
     console.log(displayCartProducts)
   return (

@@ -1,14 +1,19 @@
 // ContactPage.js
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import Nav from './Nav';
 
-const ContactPage = () => {
-  // State to track form inputs
-  const [formData, setFormData] = useState({
+const ContactPage = ({cartCount, setCartCount}) => {
+
+  const reff = useRef()
+  const initData = {
     name: '',
     email: '',
     message: '',
-  });
+  }
+
+  // State to track form inputs
+  const [formData, setFormData] = useState(initData);
 
   // Handle form input changes
   const handleInputChange = (e) => {
@@ -24,11 +29,16 @@ const ContactPage = () => {
     e.preventDefault();
     // Perform your form submission logic here
     console.log('Form submitted:', formData);
+    setFormData(initData)
+    reff.current.focus()
     // You can add logic to send the form data to a server or handle it in other ways
   };
 
   return (
   <>
+        <div className="pt-3 bg-light">
+        <Nav  cartCount={cartCount} setCartCount={setCartCount} />
+      </div>
     <div className='' style={{display:"flex", justifyContent:"center",height:"80vh", alignItems:"center"}}>
 <div className=''>
 <h2>Contact Us</h2>
@@ -36,7 +46,9 @@ const ContactPage = () => {
         <div>
           <label htmlFor="name">Name:</label>
           <input
+          autoFocus
           className='form-control'
+          ref={reff}
             type="text"
             id="name"
             name="name"
